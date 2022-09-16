@@ -1,0 +1,409 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "team charolette",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ProductOutage",
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "MenuItem"
+                        }
+                    ],
+                    "samples": [
+                        "Is {item} available at my store",
+                        "Is {item} available",
+                        "Do you have {item}",
+                        "Is there anything unavailable",
+                        "Can I get {item}",
+                        "are there any product outages"
+                    ]
+                },
+                {
+                    "name": "FindNearMeA",
+                    "slots": [],
+                    "samples": [
+                        "Wheres the closest McDonalds",
+                        "What are the closest McDonalds",
+                        "What stores are near me"
+                    ]
+                },
+                {
+                    "name": "GetMCDInfo",
+                    "slots": [],
+                    "samples": [
+                        "Why does the ice cream machine break",
+                        "Why does the ice cream machine always break",
+                        "Why is the ice cream machine always broken"
+                    ]
+                },
+                {
+                    "name": "productVariance",
+                    "slots": [
+                        {
+                            "name": "itemType",
+                            "type": "ItemType"
+                        }
+                    ],
+                    "samples": [
+                        "Are there any {itemType}",
+                        "Are there any {itemType} options"
+                    ]
+                },
+                {
+                    "name": "waitTime",
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "MenuItem"
+                        },
+                        {
+                            "name": "waitType",
+                            "type": "waitType"
+                        }
+                    ],
+                    "samples": [
+                        "How long for a {item}",
+                        "How long will it take to go through the {waitType}",
+                        "What\u0027s the wait like {waitType}",
+                        "How long for {waitType}",
+                        "How long for {item}",
+                        "whats the wait time for {waitType}"
+                    ]
+                },
+                {
+                    "name": "ProductQuality",
+                    "slots": [
+                        {
+                            "name": "MenuItem",
+                            "type": "MenuItem"
+                        },
+                        {
+                            "name": "QualityItem",
+                            "type": "QualityItem",
+                            "samples": [
+                                "I am looking for {QualityItem}",
+                                "{QualityItem} Please"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "where is the {QualityItem}  {MenuItem}",
+                        "where can I find the {QualityItem} {MenuItem}",
+                        "where is the {QualityItem} {MenuItem} in town"
+                    ]
+                },
+                {
+                    "name": "updateUser",
+                    "samples": [
+                        "Set my store to {Location}",
+                        "update my preferred store to {Location}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "Location",
+                            "type": "Location"
+                        }
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "waitType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "driveThrough"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "delivery"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "walkIn"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "QualityItem",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "fastest",
+                                "synonyms": [
+                                    "quickest"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "worst"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "best",
+                                "synonyms": [
+                                    "greatest"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "slowest"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ItemType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "meat"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "milk"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "vegetarian"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "vegan"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MenuItem",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "ice cream"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "burger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bigmac"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cheeseburger"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Location",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "1 Yorktown Shopping Center"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "300 E Roosevelt Rd"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "445 W Roosevelt Rd"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "2111 Midwest Rd, Oak Brook"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ProductOutage",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "MenuItem",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.503335123663.645762338857"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductQuality",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "MenuItem",
+                            "type": "MenuItem",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "QualityItem",
+                            "type": "QualityItem",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.250453664430.478466038427"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "waitTime",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "item",
+                            "type": "MenuItem",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.724540224920.879959272749"
+                            }
+                        },
+                        {
+                            "name": "waitType",
+                            "type": "waitType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.724540224920.1356701940027"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "productVariance",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "itemType",
+                            "type": "ItemType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.150686966334.558047650382"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updateUser",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Location",
+                            "type": "Location",
+                            "elicitationRequired": true,
+                            "confirmationRequired": false,
+                            "prompts": {
+                                "elicit": "Elicit.Intent-updateUser.IntentSlot-Location"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.503335123663.645762338857",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What item would you like to know about?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.250453664430.478466038427",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What item would you like to know about?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.724540224920.1356701940027",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How would you like to retrieve this item. Drivethrough, delivery or walk in?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.724540224920.879959272749",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What item would you like to know about?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.150686966334.558047650382",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What item would you like to know about?"
+                    }
+                ]
+            }
+        ]
+    }
+}
